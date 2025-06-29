@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "A website created with OpenManus",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "website",
+    "openmanus",
+    "ai-generated"
+  ],
+  "author": "openmanus@example.com",
+  "license": "MIT",
+  "siteId": "4zsVSnPCPzdbGwR5KgM6",
+  "createdAt": "2025-06-30T07:41:01.259011",
+  "framework": "vanilla-html-css-js"
+}
