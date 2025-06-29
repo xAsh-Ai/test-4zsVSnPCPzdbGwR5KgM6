@@ -1,28 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Python Academy - 파이썬 교육 프로그램</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>test</h1>
-            <p class="description">Welcome to your new website!</p>
-        </header>
-        <main>
-            <section class="content">
-                <h2>Get Started</h2>
-                <p>This is your new website. Start editing the HTML, CSS, and JavaScript files to customize it!</p>
-                <button id="welcomeBtn" class="btn-primary">Click Me!</button>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2024 test. Built with OpenManus.</p>
-        </footer>
-    </div>
+    <!-- 헤더 -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fab fa-python"></i>
+                    <span>Python Academy</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#courses">강의</a></li>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 섹션 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>파이썬으로 시작하는<br><span class="highlight">프로그래밍 여정</span></h1>
+            <p>초보자부터 전문가까지, 체계적인 파이썬 교육 프로그램으로<br>당신의 코딩 실력을 한 단계 업그레이드하세요!</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn btn-primary">강의 둘러보기</a>
+                <a href="#contact" class="btn btn-secondary">무료 상담</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="code-animation">
+                <div class="code-line">
+                    <span class="keyword">def</span> <span class="function">learn_python</span>():
+                </div>
+                <div class="code-line indent">
+                    <span class="keyword">print</span>(<span class="string">"Hello, Python World!"</span>)
+                </div>
+                <div class="code-line indent">
+                    <span class="keyword">return</span> <span class="string">"Success!"</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 특징 섹션 -->
+    <section class="features">
+        <div class="container">
+            <h2>왜 Python Academy인가요?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>체계적인 커리큘럼</h3>
+                    <p>기초부터 고급까지 단계별로 설계된 학습 과정으로 확실한 실력 향상을 보장합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>실습 중심 교육</h3>
+                    <p>이론과 실습의 완벽한 조화로 실무에 바로 적용 가능한 코딩 능력을 기릅니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>1:1 멘토링</h3>
+                    <p>개인별 맞춤 지도로 학습 효과를 극대화하고 궁금증을 즉시 해결합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>프로젝트 기반</h3>
+                    <p>실제 프로젝트를 통해 포트폴리오를 구축하고 취업 경쟁력을 높입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 강의 섹션 -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>인기 강의</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>파이썬 기초</h3>
+                        <p>프로그래밍이 처음인 분들을 위한 파이썬 입문 과정입니다.</p>
+                        <div class="course-info">
+                            <span class="duration"><i class="fas fa-clock"></i> 8주</span>
+                            <span class="level"><i class="fas fa-signal"></i> 초급</span>
+                        </div>
+                        <div class="course-price">₩199,000</div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>데이터 분석</h3>
+                        <p>Pandas, NumPy를 활용한 데이터 분석 및 시각화 과정입니다.</p>
+                        <div class="course-info">
+                            <span class="duration"><i class="fas fa-clock"></i> 10주</span>
+                            <span class="level"><i class="fas fa-signal"></i> 중급</span>
+                        </div>
+                        <div class="course-price">₩299,000</div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>웹 개발</h3>
+                        <p>Django/Flask를 이용한 웹 애플리케이션 개발 과정입니다.</p>
+                        <div class="course-info">
+                            <span class="duration"><i class="fas fa-clock"></i> 12주</span>
+                            <span class="level"><i class="fas fa-signal"></i> 중급</span>
+                        </div>
+                        <div class="course-price">₩399,000</div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>머신러닝</h3>
+                        <p>scikit-learn과 TensorFlow를 활용한 AI 개발 과정입니다.</p>
+                        <div class="course-info">
+                            <span class="duration"><i class="fas fa-clock"></i> 16주</span>
+                            <span class="level"><i class="fas fa-signal"></i> 고급</span>
+                        </div>
+                        <div class="course-price">₩599,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Python Academy 소개</h2>
+                    <p>Python Academy는 2020년부터 수많은 학생들의 프로그래밍 꿈을 실현시켜온 온라인 교육 플랫폼입니다.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">1,500+</div>
+                            <div class="stat-label">수강생</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">만족도</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">취업 성공</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="python-logo">
+                        <i class="fab fa-python"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>문의하기</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>연락처 정보</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@pythonacademy.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>02-1234-5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>서울시 강남구 테헤란로 123</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="이름" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="이메일" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">관심 분야 선택</option>
+                            <option value="basic">파이썬 기초</option>
+                            <option value="data">데이터 분석</option>
+                            <option value="web">웹 개발</option>
+                            <option value="ml">머신러닝</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="문의 내용" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">문의하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fab fa-python"></i>
+                        <span>Python Academy</span>
+                    </div>
+                    <p>파이썬으로 여러분의 미래를 코딩하세요!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>빠른 링크</h4>
+                    <ul>
+                        <li><a href="#home">홈</a></li>
+                        <li><a href="#courses">강의</a></li>
+                        <li><a href="#about">소개</a></li>
+                        <li><a href="#contact">문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>소셜 미디어</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Python Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
