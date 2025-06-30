@@ -3,292 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐍 파이썬 마스터 - 인터랙티브 학습 플랫폼</title>
+    <title>파이썬 교육 프로그램 - Python Learning Hub</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </head>
 <body>
-    <!-- 헤더 -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🐍</span>
-                <h1>파이썬 마스터</h1>
+    <div class="container">
+        <header>
+            <h1>🐍 파이썬 교육 프로그램</h1>
+            <p>초보자부터 중급자까지, 단계별 파이썬 학습</p>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="lessons">강의</button>
+            <button class="tab-btn" data-tab="practice">실습</button>
+            <button class="tab-btn" data-tab="quiz">퀴즈</button>
+            <button class="tab-btn" data-tab="projects">프로젝트</button>
+        </nav>
+
+        <!-- 강의 섹션 -->
+        <div id="lessons" class="tab-content active">
+            <div class="lesson-grid">
+                <div class="lesson-card" data-lesson="1">
+                    <h3>1강: 파이썬 시작하기</h3>
+                    <p>파이썬 설치부터 첫 프로그램까지</p>
+                    <span class="difficulty beginner">초급</span>
+                </div>
+                <div class="lesson-card" data-lesson="2">
+                    <h3>2강: 변수와 데이터 타입</h3>
+                    <p>숫자, 문자열, 불린 타입 이해하기</p>
+                    <span class="difficulty beginner">초급</span>
+                </div>
+                <div class="lesson-card" data-lesson="3">
+                    <h3>3강: 조건문과 반복문</h3>
+                    <p>if문, for문, while문 활용하기</p>
+                    <span class="difficulty beginner">초급</span>
+                </div>
+                <div class="lesson-card" data-lesson="4">
+                    <h3>4강: 함수와 모듈</h3>
+                    <p>코드 재사용과 모듈화 이해하기</p>
+                    <span class="difficulty intermediate">중급</span>
+                </div>
+                <div class="lesson-card" data-lesson="5">
+                    <h3>5강: 리스트와 딕셔너리</h3>
+                    <p>데이터 구조 활용하기</p>
+                    <span class="difficulty intermediate">중급</span>
+                </div>
+                <div class="lesson-card" data-lesson="6">
+                    <h3>6강: 파일 처리와 예외 처리</h3>
+                    <p>파일 입출력과 오류 처리 방법</p>
+                    <span class="difficulty intermediate">중급</span>
+                </div>
             </div>
-            <nav class="nav">
-                <button class="nav-btn active" data-section="lessons">강의</button>
-                <button class="nav-btn" data-section="practice">실습</button>
-                <button class="nav-btn" data-section="quiz">퀴즈</button>
-                <button class="nav-btn" data-section="progress">진도</button>
-            </nav>
         </div>
-    </header>
 
-    <!-- 메인 컨텐츠 -->
-    <main class="main">
-        <div class="container">
-            <!-- 강의 섹션 -->
-            <section id="lessons" class="section active">
-                <div class="section-header">
-                    <h2>📚 파이썬 기초 강의</h2>
-                    <p>단계별로 파이썬을 배워보세요</p>
+        <!-- 실습 섹션 -->
+        <div id="practice" class="tab-content">
+            <div class="code-editor">
+                <h3>파이썬 코드 실습</h3>
+                <div class="editor-container">
+                    <textarea id="code-input" placeholder="여기에 파이썬 코드를 작성하세요...">print("Hello, Python!")
+name = "파이썬 학습자"
+print(f"안녕하세요, {name}님!")</textarea>
+                    <button id="run-code" class="btn-primary">코드 실행</button>
                 </div>
-                
-                <div class="lesson-grid">
-                    <div class="lesson-card" data-lesson="1">
-                        <div class="lesson-number">01</div>
-                        <h3>파이썬 소개 & 설치</h3>
-                        <p>파이썬이 무엇인지, 어떻게 설치하는지 알아봅시다</p>
-                        <div class="lesson-meta">
-                            <span class="duration">⏱️ 15분</span>
-                            <span class="level beginner">초급</span>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-lesson="2">
-                        <div class="lesson-number">02</div>
-                        <h3>변수와 데이터 타입</h3>
-                        <p>숫자, 문자열, 불린 타입을 다뤄봅시다</p>
-                        <div class="lesson-meta">
-                            <span class="duration">⏱️ 20분</span>
-                            <span class="level beginner">초급</span>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-lesson="3">
-                        <div class="lesson-number">03</div>
-                        <h3>연산자와 표현식</h3>
-                        <p>산술, 비교, 논리 연산자를 배워봅시다</p>
-                        <div class="lesson-meta">
-                            <span class="duration">⏱️ 25분</span>
-                            <span class="level beginner">초급</span>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-lesson="4">
-                        <div class="lesson-number">04</div>
-                        <h3>조건문 (if, elif, else)</h3>
-                        <p>조건에 따라 다른 동작을 하는 프로그램을 만들어봅시다</p>
-                        <div class="lesson-meta">
-                            <span class="duration">⏱️ 30분</span>
-                            <span class="level intermediate">중급</span>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-lesson="5">
-                        <div class="lesson-number">05</div>
-                        <h3>반복문 (for, while)</h3>
-                        <p>반복 작업을 효율적으로 처리하는 방법을 배워봅시다</p>
-                        <div class="lesson-meta">
-                            <span class="duration">⏱️ 35분</span>
-                            <span class="level intermediate">중급</span>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-lesson="6">
-                        <div class="lesson-number">06</div>
-                        <h3>리스트와 튜플</h3>
-                        <p>여러 데이터를 한 번에 관리하는 방법을 알아봅시다</p>
-                        <div class="lesson-meta">
-                            <span class="duration">⏱️ 40분</span>
-                            <span class="level intermediate">중급</span>
-                        </div>
-                    </div>
+                <div class="output-container">
+                    <h4>실행 결과:</h4>
+                    <pre id="output"></pre>
                 </div>
-            </section>
-
-            <!-- 실습 섹션 -->
-            <section id="practice" class="section">
-                <div class="section-header">
-                    <h2>💻 코드 실습</h2>
-                    <p>직접 코드를 작성하고 실행해보세요</p>
-                </div>
-
-                <div class="code-editor-container">
-                    <div class="editor-header">
-                        <h3>파이썬 코드 에디터</h3>
-                        <button id="runCode" class="run-btn">▶️ 실행</button>
-                    </div>
-                    
-                    <div class="editor-body">
-                        <div class="code-input">
-                            <textarea id="codeEditor" placeholder="여기에 파이썬 코드를 작성하세요...
-# 예시:
-print('Hello, Python!')
-name = '파이썬'
-print(f'안녕하세요, {name}!')"></textarea>
-                        </div>
-                        
-                        <div class="code-output">
-                            <h4>실행 결과:</h4>
-                            <div id="output" class="output-area">
-                                <p class="output-placeholder">코드를 실행하면 결과가 여기에 표시됩니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 실습 예제들 -->
-                <div class="practice-examples">
-                    <h3>실습 예제</h3>
-                    <div class="example-grid">
-                        <div class="example-card" data-example="hello">
-                            <h4>🌟 Hello World</h4>
-                            <p>첫 파이썬 프로그램을 만들어보세요</p>
-                        </div>
-                        <div class="example-card" data-example="calculator">
-                            <h4>🧮 간단한 계산기</h4>
-                            <p>사칙연산을 하는 계산기를 만들어보세요</p>
-                        </div>
-                        <div class="example-card" data-example="guessing">
-                            <h4>🎯 숫자 맞추기 게임</h4>
-                            <p>랜덤 숫자를 맞추는 게임을 만들어보세요</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 퀴즈 섹션 -->
-            <section id="quiz" class="section">
-                <div class="section-header">
-                    <h2>🧠 퀴즈</h2>
-                    <p>배운 내용을 테스트해보세요</p>
-                </div>
-
-                <div class="quiz-container">
-                    <div class="quiz-header">
-                        <div class="quiz-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 0%"></div>
-                            </div>
-                            <span class="progress-text">문제 <span id="currentQuestion">1</span> / <span id="totalQuestions">5</span></span>
-                        </div>
-                    </div>
-
-                    <div class="quiz-content">
-                        <div class="question-card">
-                            <h3 id="questionText">다음 중 파이썬에서 올바른 변수명은?</h3>
-                            <div class="options">
-                                <button class="option-btn" data-option="A">A) 2variable</button>
-                                <button class="option-btn" data-option="B">B) my_variable</button>
-                                <button class="option-btn" data-option="C">C) my-variable</button>
-                                <button class="option-btn" data-option="D">D) def</button>
-                            </div>
-                        </div>
-
-                        <div class="quiz-controls">
-                            <button id="prevQuestion" class="quiz-btn secondary" disabled>이전</button>
-                            <button id="nextQuestion" class="quiz-btn primary">다음</button>
-                        </div>
-                    </div>
-
-                    <div class="quiz-result" style="display: none;">
-                        <div class="result-card">
-                            <h3>🎉 퀴즈 완료!</h3>
-                            <div class="score">
-                                <span class="score-number" id="finalScore">80</span>
-                                <span class="score-text">점</span>
-                            </div>
-                            <p id="scoreMessage">잘했어요! 계속 공부해보세요.</p>
-                            <button id="retakeQuiz" class="quiz-btn primary">다시 도전</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 진도 섹션 -->
-            <section id="progress" class="section">
-                <div class="section-header">
-                    <h2>📊 학습 진도</h2>
-                    <p>나의 학습 현황을 확인해보세요</p>
-                </div>
-
-                <div class="progress-dashboard">
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">📚</div>
-                            <div class="stat-content">
-                                <h3>완료한 강의</h3>
-                                <div class="stat-number">3<span>/6</span></div>
-                            </div>
-                        </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon">💻</div>
-                            <div class="stat-content">
-                                <h3>실습 문제</h3>
-                                <div class="stat-number">12<span>/20</span></div>
-                            </div>
-                        </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon">🧠</div>
-                            <div class="stat-content">
-                                <h3>퀴즈 점수</h3>
-                                <div class="stat-number">85<span>점</span></div>
-                            </div>
-                        </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon">⏱️</div>
-                            <div class="stat-content">
-                                <h3>학습 시간</h3>
-                                <div class="stat-number">4.5<span>시간</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="achievement-section">
-                        <h3>🏆 획득한 뱃지</h3>
-                        <div class="badge-grid">
-                            <div class="badge earned">
-                                <div class="badge-icon">🌟</div>
-                                <span>첫 걸음</span>
-                            </div>
-                            <div class="badge earned">
-                                <div class="badge-icon">💡</div>
-                                <span>변수 마스터</span>
-                            </div>
-                            <div class="badge earned">
-                                <div class="badge-icon">🔄</div>
-                                <span>반복문 정복</span>
-                            </div>
-                            <div class="badge">
-                                <div class="badge-icon">🎯</div>
-                                <span>퀴즈 킹</span>
-                            </div>
-                            <div class="badge">
-                                <div class="badge-icon">🚀</div>
-                                <span>파이썬 마스터</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- 강의 모달 -->
-    <div id="lessonModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">강의 제목</h2>
-                <button class="modal-close">&times;</button>
             </div>
-            <div class="modal-body">
-                <div id="lessonContent">
-                    <!-- 강의 내용이 여기에 동적으로 로드됩니다 -->
+        </div>
+
+        <!-- 퀴즈 섹션 -->
+        <div id="quiz" class="tab-content">
+            <div class="quiz-container">
+                <h3>파이썬 퀴즈</h3>
+                <div id="quiz-content">
+                    <div class="quiz-question">
+                        <h4>1. 다음 중 파이썬의 올바른 변수명은?</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="a"> 1name</label>
+                            <label><input type="radio" name="q1" value="b"> my_name</label>
+                            <label><input type="radio" name="q1" value="c"> class</label>
+                            <label><input type="radio" name="q1" value="d"> my-name</label>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <h4>2. print() 함수의 올바른 사용법은?</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q2" value="a"> print "Hello"</label>
+                            <label><input type="radio" name="q2" value="b"> print("Hello")</label>
+                            <label><input type="radio" name="q2" value="c"> Print("Hello")</label>
+                            <label><input type="radio" name="q2" value="d"> PRINT("Hello")</label>
+                        </div>
+                    </div>
+                    <button id="submit-quiz" class="btn-primary">답안 제출</button>
+                    <div id="quiz-result"></div>
                 </div>
+            </div>
+        </div>
+
+        <!-- 프로젝트 섹션 -->
+        <div id="projects" class="tab-content">
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>🎲 주사위 게임</h3>
+                    <p>random 모듈을 사용한 간단한 게임</p>
+                    <div class="project-tags">
+                        <span>초급</span>
+                        <span>random</span>
+                        <span>조건문</span>
+                    </div>
+                    <button class="btn-secondary" onclick="showProject('dice')">프로젝트 보기</button>
+                </div>
+                <div class="project-card">
+                    <h3>📝 할 일 관리</h3>
+                    <p>리스트를 활용한 TODO 앱</p>
+                    <div class="project-tags">
+                        <span>중급</span>
+                        <span>리스트</span>
+                        <span>함수</span>
+                    </div>
+                    <button class="btn-secondary" onclick="showProject('todo')">프로젝트 보기</button>
+                </div>
+                <div class="project-card">
+                    <h3>🌡️ 날씨 앱</h3>
+                    <p>API를 활용한 날씨 정보 앱</p>
+                    <div class="project-tags">
+                        <span>고급</span>
+                        <span>API</span>
+                        <span>JSON</span>
+                    </div>
+                    <button class="btn-secondary" onclick="showProject('weather')">프로젝트 보기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 강의 상세 모달 -->
+        <div id="lesson-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="lesson-detail"></div>
+            </div>
+        </div>
+
+        <!-- 프로젝트 상세 모달 -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="project-detail"></div>
             </div>
         </div>
     </div>
 
-    <!-- 스크립트 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
